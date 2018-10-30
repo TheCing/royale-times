@@ -1,0 +1,60 @@
+// Nav Styles
+nav {
+  padding: 0.15em 0 1em 0;
+  background-color: white;
+  box-shadow: 2px 2px 8px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  .hamburger {
+    margin-top: 0.65em;
+    margin-left: 1.5em;
+    .bars {
+      @extend %fa-icon;
+      @extend .fas;
+
+      &:before {
+        content: fa-content($fa-var-bars);
+      }
+    }
+  }
+
+  .home {
+    position: absolute;
+    margin-left: 4em;
+    .home-link {
+      .home-logo {
+        width: 3em;
+      }
+    }
+  }
+
+  .account {
+    margin-top: 0.65em;
+    margin-left: 1.5em;
+    .user {
+      @extend %fa-icon;
+      @extend .fas;
+
+      &:before {
+        content: fa-content($fa-var-user);
+      }
+    }
+  }
+
+  .primary-nav {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .active {
+    color: gray;
+  }
+}

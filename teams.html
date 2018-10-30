@@ -1,0 +1,14 @@
+---
+title: Teams
+---
+<h1>Teams</h1>
+
+<ul>
+  {% for team in site.teams %}
+  <li>
+    <h2><a href="{{ team.url }}">{{ team.name }}</a></h2>
+    <h3>{{ team.region }}</h3>
+    <p>{{ team.content | markdownify }}</p>
+  </li>
+  {% endfor %}
+</ul>

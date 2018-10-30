@@ -1,0 +1,67 @@
+---
+title: Home
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="home-page page-start">
+    <div class="container">
+      <h1 class="hero-title">Royale Times</h1>
+      <p class="current-date">{{ site.time | date_to_string: "ordinal", "US" }}</p>
+      <hr>
+      <p class="upcoming-match-title">Next Upcoming Match</p>
+      <div class="row align-items-center upcoming-match">
+        <div class="col text-right">
+          {% assign col = site.teams | where_exp:"team", "team.name == 'Complexity'" | first %}
+          <a href="/teams/complexity"><img src="{{ col.logo }}" alt="Complexity"></a>
+        </div>
+        <div class="col text-center">
+          <p>vs.</p>
+        </div>
+        <div class="col text-left">
+          {% assign im = site.teams | where_exp:"team", "team.name == 'Immortals'" | first %}
+          <a href="/teams/immortals"><img src="{{ im.logo }}" alt="Immortals"></a>
+        </div>
+      </div>
+      <p class="upcoming-match-time">October 29th, 2018 7:00 pm EST</p>
+      <hr>
+      <div class="featured-article">
+        <p class="featured-text">
+          Featured Article
+        </p>
+        {% for post in site.posts %}
+          {% if post.featured %}
+            <a class="article-link" href="{{ post.url | remove: ".html" }}"><h1 class="article-title">{{ post.title }}</h1></a>
+            <p class="article-date">posted {{ post.date | date_to_string: "ordinal", "US" }}</p>
+            <span class="article-excerpt">{{ post.excerpt }}</span>
+            <a class="article-link" href="{{ post.url | remove: ".html" }}"><p class="read-more">Read more...</p></a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <hr>
+      <div class="banner">
+        Ad placeholder
+      </div>
+      <hr>
+      <div class="articles">
+        {% for post in site.posts %}
+          {% unless post.featured %}
+            <a class="article-link" href="{{ post.url | remove: ".html" }}"><h1 class="article-title">{{ post.title }}</h1></a>
+            <p class="article-date">posted {{ post.date | date_to_string: "ordinal", "US" }}</p>
+            <span class="article-excerpt">{{ post.excerpt }}</span>
+            <a class="article-link" href="{{ post.url | remove: ".html" }}"><p class="read-more">Read more...</p></a>
+            <hr>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

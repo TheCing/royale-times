@@ -1,0 +1,35 @@
+title: Royale Times
+email: cingofspades@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Catch the latest on everything Clash Royale, from CRL to update news.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: thecing
+github_username:  thecing
+
+collections:
+  authors:
+    output: true
+  teams:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "teams"
+    values:
+      layout: "team"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

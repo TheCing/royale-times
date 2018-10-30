@@ -1,0 +1,70 @@
+// Home Page Styling
+.home-page {
+  position: relative;
+
+  img {
+    width: 70%;
+  }
+}
+
+.hero-title {
+  margin-bottom: 0;
+  text-align: center;
+  font-family: $playfair;
+  font-weight: 700;
+}
+
+.current-date {
+  text-align: center;
+  font-family: $merriweather;
+  font-weight: 300;
+}
+
+.upcoming-match-title {
+  text-align: center;
+  font-family: $merriweather;
+  font-weight: 400;
+}
+
+.upcoming-match {
+  text-align: center;
+  font-family: $merriweather;
+  font-weight: 300;
+}
+
+.upcoming-match-time {
+  text-align: center;
+  font-family: $merriweather;
+  font-weight: 300;
+  margin-top: 5%;
+}
+
+.featured-text {
+  font-family: $merriweather;
+  font-weight: 300;
+}
+
+.article-title {
+  font-family: $playfair;
+  font-weight: 700;
+  margin: 0;
+}
+
+.article-link {
+  color: black;
+}
+
+.article-date {
+  font-family: $merriweather;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.article-excerpt p {
+  margin-bottom: 0;
+}
+
+.read-more {
+  color: #4aa8c6;
+  font-style: italic;
+}

@@ -1,0 +1,28 @@
+<nav>
+  <div class="row">
+    <div class="col">
+      <div class="hamburger" id="hamburger">
+        <span class="bars" id="bars"></span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="home">
+        <a class="home-link" href="/">
+          <img class="home-logo" src="/assets/images/crl_logo.png" alt="Home">
+        </a>
+      </div>
+    </div>
+    <div class="col">
+      <div class="account">
+        <span class="user"></span>
+      </div>
+    </div>
+  </div>
+  <div class="primary-nav">
+    {% for item in site.data.nav %}
+      <a href="{{ item.link }}" {% if page.url == item.fullLink %}class="active"{% endif %}>
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </div>
+</nav>
