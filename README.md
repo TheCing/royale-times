@@ -1,2 +1,2 @@
-# jekyll-blog
-Jekyll Blog Template with Jekyll Admin CMS GUI
+# Royale Times
+Clash Royale News Site
