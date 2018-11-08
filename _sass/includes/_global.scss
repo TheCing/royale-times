@@ -1,4 +1,9 @@
 // Global styles
+body {
+  transition: background-color 1s;
+}
+button:focus {outline:0;}
+
 .page-start {
   margin-top: 4em;
 }

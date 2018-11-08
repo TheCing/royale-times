@@ -1,6 +1,7 @@
 // Nav Styles
 nav {
-  padding: 0.15em 0 1em 0;
+  // padding: 0.15em 0 1em 0;
+  padding: 0.15em 0 0.75em 0;
   background-color: white;
   box-shadow: 2px 2px 8px;
   width: 100%;
@@ -9,7 +10,13 @@ nav {
   top: 0;
   left: 0;
 
+  .hamburger-z {
+    z-index: 10;
+  }
+
   .hamburger {
+    transform: scale(0.5);
+    padding: unset;
     margin-top: 0.65em;
     margin-left: 1.5em;
     .bars {
@@ -45,8 +52,59 @@ nav {
     }
   }
 
+  .nav-container {
+    position: absolute;
+    height: -webkit-fill-available;
+    z-index: -1;
+    width: 50%;
+    top: 3.5em;
+    left: -15em;
+    background-color: white;
+    box-shadow: 0px 8px 8px black;
+    transition: left 1s;
+  }
+
+  .login-container {
+    position: absolute;
+    height: -webkit-fill-available;
+    padding-top: 1em;
+    z-index: -1;
+    width: 50%;
+    top: 3.5em;
+    right: -15em;
+    background-color: white;
+    font-family: $roboto;
+    box-shadow: 0px 3px 8px black;
+    transition: right 1s;
+
+    .login-text {
+      h2 {
+        font-family: $playfair;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+
+    .signup-link {
+      margin-top: 0.5em;
+
+      h4 {
+        font-family: $playfair;
+        font-weight: 700;
+      }
+    }
+  }
+
   .primary-nav {
-    display: none;
+    // display: none;
+    text-align: left;
+    margin-top: 1em;
+    a {
+      margin-left: 1em;
+      display: block;
+      color: black;
+      font-family: $merriweather;
+    }
   }
 
   a {

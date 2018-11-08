@@ -1,9 +1,11 @@
 <nav>
   <div class="row">
-    <div class="col">
-      <div class="hamburger" id="hamburger">
-        <span class="bars" id="bars"></span>
-      </div>
+    <div class="col hamburger-z">
+      <button class="hamburger hamburger--slider" id="hamburger" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </div>
     <div class="col-6">
       <div class="home">
@@ -18,11 +20,39 @@
       </div>
     </div>
   </div>
-  <div class="primary-nav">
-    {% for item in site.data.nav %}
-      <a href="{{ item.link }}" {% if page.url == item.fullLink %}class="active"{% endif %}>
-        {{ item.name }}
-      </a>
-    {% endfor %}
+  <div class="nav-container">
+    <div class="primary-nav">
+      {% for item in site.data.nav %}
+        <a href="{{ item.link }}" {% if page.url == item.fullLink %}class="active"{% endif %}>
+          {{ item.name }}
+        </a>
+        <hr>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="login-container container">
+    <div class="login-text">
+      <h2>Login</h2>
+      <p>to your account</p>
+    </div>
+    <div class="login-field">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Email">
+      </div>
+    </div>
+    <div class="password-field">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <div class="signup-link">
+      <hr>
+      <h4>Don't have an account?</h4>
+      <p>Register an account with us to get the latest updates and contribute to sitewide discussions.</p>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
   </div>
 </nav>

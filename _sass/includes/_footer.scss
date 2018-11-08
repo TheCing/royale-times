@@ -1,8 +1,31 @@
 footer {
   margin-top: 1em;
-  padding: 1em 0;
-  background-color: white;
+  // background-color: white;
   box-shadow: 2px 2px 8px;
   width: 100%;
   text-align: center;
+}
+
+.newsletter-form {
+  padding-top: 1em;
+  background-color: white;
+}
+
+.footer {
+  padding-bottom: 1em;
+  background-color: white;
+}
+
+.close-btn {
+  float: right;
+  cursor: pointer;
+}
+
+.footer-top-padding {
+  padding-top: 1em;
+}
+
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
 }
